@@ -4,18 +4,10 @@
 
 ## Usage
 
-1、npm i swift-run --save
+1、add `*.swift` file
 
-2、add scripts `package.json`
+2、npx swift-run
 
-```
-"scripts": {
-  "start": "node index.js"
-},
-```
+3、change `*.swift` file
 
-3、npm run start
-
-4、add `*.swift` file
-
-5、console output after modification culture
+4、console output after modification culture

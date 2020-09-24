@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const WebSocket = require('ws')
 const Chokidar = require('chokidar')
 const Fs = require('fs')
