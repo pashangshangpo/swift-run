@@ -4,7 +4,7 @@
 
 ## Usage
 
-1、npm i swift-run
+1、npm i swift-run --save
 
 2、add scripts `package.json`
 
