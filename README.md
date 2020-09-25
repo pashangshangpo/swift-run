@@ -19,15 +19,11 @@
 demo.md
 
 ```md
-## name
-
 ```swift
 var name: String = "zhang shang"
 
 print(name)
 ```
-
-## Age
 
 ```swift
 var age: Int = 19
