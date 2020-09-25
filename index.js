@@ -25,10 +25,25 @@ const fileChangeRun = (reg, run) => {
       return
     }
 
-    const fileContent = Fs.readFileSync(path).toString().trim()
+    let fileContent = Fs.readFileSync(path).toString().trim()
 
     if (!fileContent) {
       return
+    }
+
+    if (path.endsWith('.md')) {
+      const swiftCodeReg = /`{3}swift.*\n([\w\W]+?)`{3}/g
+      const swiftCodes = []
+
+      for (let matchRes of fileContent.matchAll(swiftCodeReg)) {
+        swiftCodes.push(matchRes[1])
+      }
+
+      if (swiftCodes.length === 0) {
+        return
+      }
+
+      fileContent = swiftCodes.join(`\nprint("\\n--- split code ---\\n")\n`)
     }
 
     run(fileContent)
@@ -36,7 +51,7 @@ const fileChangeRun = (reg, run) => {
 }
 
 ws.on('open', () => {
-  fileChangeRun('*.swift', run)
+  fileChangeRun('*.(swift|md)', run)
 })
 
 ws.on('message', data => {
