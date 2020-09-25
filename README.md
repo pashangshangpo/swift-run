@@ -18,19 +18,7 @@
 
 demo.md
 
-```md
-```swift
-var name: String = "zhang shang"
-
-print(name)
-```
-
-```swift
-var age: Int = 19
-
-print("Name：\(name)\nAge：\(age)")
-```
-```
+![demo.md](https://user-images.githubusercontent.com/28686832/94243671-49db6800-ff4a-11ea-8a17-a0725587531c.png)
 
 Change Output:
 
